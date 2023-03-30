@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="topNav.css">
+    <title>Products</title>
+</head>
+<body>
+    <div class="topOfPage">
+        <h1>Product Page</h1>
+    </div>
+
+    <section class="topMenu">    
+        <div class="topNav">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="admin.html" id="adminBtn">Edit an Order</a>
+            <a class="cart" href="shoppingcart.html">
+                <img src="shopping-cart.png" alt="Shopping cart" title="Cart" width="25px">
+                <span id="totalCartItems"></span>
+            </a>
+        </div>
+    </section>
+
+    <div class="filters" id="filterArea">
+        <button class="category-button" data-category="all">All</button>
+        <button class="category-button" data-category="men's clothing">Men's Clothing</button>
+        <button class="category-button" data-category="women's clothing">Women's Clothing</button>
+        <button class="category-button" data-category="jewelery">Jewelery</button>
+        <button class="category-button" data-category="electronics">Electronics</button>
+    </div>
+
+    <button onclick="topFunction()" id="topBtn" title="Go to top of page">Top</button>
+
+    <section id="products"></section>
+
+    <script src="shop.js"></script>
+</body>
+</html>

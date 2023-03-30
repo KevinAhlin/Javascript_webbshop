@@ -1,0 +1,81 @@
+/* CSS-reset */
+/* * {
+    margin: 0;
+    padding: 0;
+}  */
+
+h1 {
+    font-size: 2.1em;
+}
+
+.topPage {
+    font-size: 50;
+}
+
+.topPage a {
+    color: black;
+    float: right;
+}
+
+h2 {
+    flex: auto;
+    align-items: center;
+    
+}
+
+/* Add a background color to the top navigation */
+.topNav {
+    background-color: rgb(41, 199, 210);
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation */
+.topNav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+    top: 8px;
+}
+
+/* Change the color of the links on hover */
+.topNav a:hover {
+    background-color: ghostwhite;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topNav a.shoppingCart {
+    /* background-color: #04AA6d;
+    color: white; */
+    float: right;
+}
+
+/* Add a color to the active/current link */
+a.cart {
+    flex-wrap: wrap;
+    float: right;
+}
+
+/* Top of the page - button */
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: rgb(1, 70, 220);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* Hover over topBtn to change its color */
+#topBtn:hover {
+    background-color: rgb(11, 204, 159);
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="topNav.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="topOfPage">
+        <h1>Admin Page</h1>
+    </div>
+
+    <section class="topMenu">    
+        <div class="topNav">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="admin.html" id="adminBtn">Edit an Order</a>
+            <a class="cart" href="shoppingcart.html">
+                <img src="shopping-cart.png" alt="Shopping cart" title="Cart" width="25px">
+                <span id="totalCartItems"></span>
+            </a>
+        </div>
+    </section>
+
+    <h2>List of orders to change, if needed</h2>
+    <hr><br>
+
+    <div class="form-popup" id="myForm">
+        <p>
+            Please fill in all fields, even those that will be unchanged. <br>
+            And after that press the 'Change Order'-button on the order you'll
+            want to change. Notice to enter the product list in the form of 
+            brackets (e.g [1,2]).
+        </p>
+        <form>
+            <fieldset>
+                <Legend id="formLegend">Change an orders personal information here</Legend>
+
+                <label for="buyerName">Full name:</label>
+                <br>
+                <input type="text" name="buyerName" id="buyerName" placeholder="Write your name here.." required>
+                <br><br>
+                <label for="email">Email:</label>
+                <br>
+                <input type="email" name="email" id="email" placeholder="Write your email here.." required>
+                <br><br>
+                <label for="address">Address:</label>
+                <br>
+                <input type="text" name="address" id="address" placeholder="Write your adress here.." required>
+                <br><br>
+                <label for="products">Product list:</label>
+                <br>
+                <input type="text" name="products" id="products" placeholder="Write your ID list here..." required>
+                <br><br>
+                <label for="shipment">Shipment Type: <br> -Standard <br> -Express</label>
+                <br>
+                <input type="text" name="shipment" id="shipmentType" placeholder="Type in shipment here..." required>
+                <br><br>
+
+            </fieldset>
+        </form>
+    </div>
+
+    <button onclick="topFunction()" id="topBtn" title="Go to top of page">Top</button>
+
+    <br><hr><br>
+    
+    <section id="customerOrder"></section>
+
+    <script src="admin.js"></script>
+</body>
+</html>
