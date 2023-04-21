@@ -62,10 +62,10 @@ function productList(productsData, selectedCategory) {
                  <br><br>
                  Rating: ${JSON.stringify(item[i].rating)}
              </p>
-             <button onclick="AddToCart('${item[i].id}', '${item[i].title}',
+             <button onclick="AddToCart('${item[i].id}', '${item[i].title.replace("'","")}',
               '${item[i].price}', '${item[i].image}')">Add to cart</button>
              <hr>
-         </article>   
+         </article>
         `
 
     }
@@ -77,9 +77,9 @@ let cart = JSON.parse(localStorage.getItem("CART")) || [];
 
 function AddToCart(itemId, itemTitle, itemPrice, itemImage) {
     // Debug
-    // console.log(itemId);
-    // console.log(itemTitle);
-    // console.log(itemPrice);
+    console.log(itemId);
+    console.log(itemTitle);
+    console.log(itemPrice);
 
     let productObject = {
         id: itemId,
