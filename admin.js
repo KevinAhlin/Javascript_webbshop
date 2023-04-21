@@ -82,9 +82,9 @@ function changeOrder(orderName, productList) {
     let productIDs = productIDListEl.value;
     console.log(productIDs);
 
-    if (fullName === '' || email === '' || address === '' || shipmentOption === '') {
+    if (fullName === '' || email === '' || address === '' || productIDs === '' || shipmentOption === '') {
         alert("Please fill in every field.");
-    } else {
+    } else if (productIDs[0] === "[" && productIDs.slice(-1) === "]") {
         // Sätt samman värdena till ett JSON-objekt
         let body = JSON.stringify(
             {
@@ -121,6 +121,8 @@ function changeOrder(orderName, productList) {
 
         alert("Order has been changed!");
         setTimeout(() => location.reload(), 300);   // Laddar om sidan efter 300 ms
+    } else {
+        alert("Please start and end product list with brackets like in the example.")
     }
 }
 
